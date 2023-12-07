@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      .sidebar {
+        flex: 1;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      .content {
+        flex: 3;
+        padding: 20px;
+      }
+
+      .dashboard-box {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+      }
+
+      .dashboard-item {
+        margin-bottom: 10px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+      }
+
+      .sidebar a:hover {
+        background-color: #e0e0e0;
+      }
+
+      .submenu {
+        display: none;
+      }
+
+      .submenu.active {
+        display: block;
+      }
+
+      .sidebar li ul {
+        padding-left: 20px;
+      }
+
+      .box {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 10px;
+      }
+
+      .box p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li>
+            <a href="#">Parents</a>
+            <ul class="submenu">
+              <li><a href="#">Add Parent</a></li>
+              <li><a href="#">View Parents</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Students</a>
+            <ul class="submenu">
+              <li><a href="#">Add Student</a></li>
+              <li><a href="#">View Students</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Staff</a>
+            <ul class="submenu">
+              <li><a href="#">Add Staff</a></li>
+              <li><a href="#">View Staff</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Class Reports</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="box">
+          <h3>Total Registered Students</h3>
+          <p id="totalStudents">100</p>
+        </div>
+        <div class="box">
+          <h3>Total Registered Parents</h3>
+          <p id="totalParents">50</p>
+        </div>
+        <div class="box">
+          <h3>Total Registered Staffs</h3>
+          <p id="totalStaffs">20</p>
+        </div>
+        <div class="box">
+          <h3>Total Listed Classes</h3>
+          <p id="totalClasses">10</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarLinks = document.querySelectorAll(".sidebar a");
+        sidebarLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const submenu = link.nextElementSibling;
+            if (submenu) {
+              if (submenu.classList.contains("submenu")) {
+                const submenus = document.querySelectorAll(".submenu.active");
+                submenus.forEach(function (menu) {
+                  if (menu !== submenu) {
+                    menu.classList.remove("active");
+                  }
+                });
+                submenu.classList.toggle("active");
+              }
+            }
+            console.log("Clicked: " + link.textContent);
+          });
+        });
+
+        // Example code to update the total counts
+        document.getElementById("totalStudents").innerText = 150; // Replace with your actual total count
+        document.getElementById("totalParents").innerText = 75; // Replace with your actual total count
+        document.getElementById("totalStaffs").innerText = 30; // Replace with your actual total count
+        document.getElementById("totalClasses").innerText = 12; // Replace with your actual total count
+      });
+    </script>
+  </body>
+</html>

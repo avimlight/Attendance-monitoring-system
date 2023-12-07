@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Pradeep Kanchan</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      .navbar {
+        background-color: #343a40;
+        padding: 10px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar-brand,
+      .navbar-nav a {
+        color: #fff !important;
+      }
+
+      .navbar-toggler-icon {
+        background-color: #fff;
+      }
+
+      #guidance {
+        font-size: 20px;
+        margin-top: 90px;
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      #profile-photo {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        margin-top: 100px;
+      }
+
+      #profile-heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      #profile-description {
+        max-width: 600px;
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      #bottom-left,
+      #bottom-right {
+        position: fixed;
+        bottom: 10px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      #bottom-left {
+        left: 20px;
+      }
+
+      #bottom-right {
+        right: 20px;
+      }
+      h1 {
+        margin-top: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">AMS</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              href="http://localhost/phpglab3/admin_pannel1.php"
+              >Home</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/3/logout.php">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <p>Under the guidance of</p>
+    <img id="profile-photo" src="sir.jpg" alt="Dr. Pradeep Kanchan" />
+
+    <div id="profile-heading">Dr. PRADEEP KANCHAN</div>
+
+    <div id="profile-description">
+      <p>
+        Dr. Pradeep Kanchan has been awarded the PhD Degree from National
+        Institute of Technology Karnataka (NITK), Surathkal in July 2022 for his
+        Thesis entitled “Improved Nature Inspired Algorithms for Optimization
+        problems in Wireless Sensor Networks”. Dr.Pradeep studied in Little Rock
+        Indian School from classes 8 to 12. He completed his BE in Computer
+        Science and Engineering from NMAMIT, Nitte in the year 1999, MTech from
+        NITK, Surathkal in 2008 and now PhD also from NITK, Surathkal in 2022.
+      </p>
+
+      <p>
+        He is also a Senior Member of IEEE. The Project ”Food Vending Machine
+        for Schools” of BE students guided by him got an award of appreciation
+        at Gandhian Young Technological Innovation Awards 2015 as part of
+        ‘Festival of Innovation’ held at Rashtrapathi Bhavan, New Delhi in March
+        2015.
+      </p>
+    </div>
+
+    <div id="bottom-left">
+      <p>NAME: AVANEESH SHARMA<br />USN: 4NM21CS038</p>
+    </div>
+
+    <div id="bottom-right">
+      <p>NAME: AVINASH MONTEIRO<br />USN: 4NM21CS040</p>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
